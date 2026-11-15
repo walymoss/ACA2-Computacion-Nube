@@ -1,0 +1,9 @@
+
+streamlit
+pandas
+numpy
+qdrant-client
+sentence-transformers
+google-genai
+scikit-learn
+joblib
