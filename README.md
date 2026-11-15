@@ -1,51 +1,62 @@
 
 # Asistente de Permanencia Educativa
 
-Sistema de inteligencia artificial que integra Retrieval-Augmented Generation (RAG) y Machine Learning para apoyar la consulta documental y el análisis del rendimiento académico.
+Aplicación de consulta documental basada en Retrieval-Augmented Generation (RAG), desarrollada para el proyecto ACA 2 de Computación en la Nube.
 
 ## Arquitectura
 
-- **Interfaz:** Streamlit.
-- **Base vectorial:** Qdrant Cloud.
-- **Modelo de lenguaje:** Google Gemini API.
-- **Embeddings:** paraphrase-multilingual-MiniLM-L12-v2.
-- **Machine Learning:** modelo MLP para estimar el rendimiento académico.
+La solución integra:
+
+- **Qdrant Cloud:** almacenamiento y recuperación semántica de fragmentos documentales.
+- **Sentence Transformers:** generación de embeddings con `paraphrase-multilingual-MiniLM-L12-v2`.
+- **Google Gemini:** generación de respuestas mediante API.
+- **Streamlit:** interfaz web interactiva.
 
 ## Funcionalidades
 
-1. Chatbot de consulta sobre permanencia estudiantil.
-2. Recuperación semántica de documentos.
-3. Respuestas fundamentadas con referencias documentales.
-4. Exploración de documentos y fragmentos indexados.
-5. Módulo de estimación del rendimiento académico.
+- Consultas en lenguaje natural sobre permanencia estudiantil.
+- Recuperación semántica de documentos mediante Qdrant.
+- Generación de respuestas fundamentadas en el contexto recuperado.
+- Visualización de fuentes y fragmentos utilizados.
+- Exploración de documentos indexados.
+- Historial de conversación.
 
-## Estructura
+## Estructura del proyecto
 
 ```text
 rag-permanencia-educativa/
 ├── app.py
 ├── requirements.txt
-├── README.md
-└── modelo_mlp.pkl
+└── README.md
 ```
 
 ## Configuración
 
 Configurar las siguientes variables en Streamlit Secrets:
 
-- QDRANT_URL
-- QDRANT_API_KEY
-- GEMINI_API_KEY
+- `QDRANT_URL`
+- `QDRANT_API_KEY`
+- `GEMINI_API_KEY`
 
 ## Ejecución local
 
+Instalar dependencias:
+
 ```bash
 pip install -r requirements.txt
+```
+
+Ejecutar la aplicación:
+
+```bash
 streamlit run app.py
 ```
 
+## Tecnologías
+
+Python, Streamlit, Qdrant Cloud, Sentence Transformers y Google Gemini.
+
 ## Proyecto académico
 
-ACA 2 - Computación en la Nube  
-Especialización en Inteligencia Artificial  
-Corporación Unificada Nacional de Educación Superior (CUN)
+ACA 2 – Computación en la Nube  
+Especialización en Inteligencia Artificial – CUN
